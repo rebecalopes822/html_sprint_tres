@@ -10,39 +10,37 @@ import {
   PageContainer,
   Title,
 } from "./styles";
-
+ 
 const Login = () => {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [formData, setFormData] = useState({
     nome: "",
-    sobrenome: "",
     email: "",
     senha: "",
     telefone: "",
-    cargo: "",
+    possuiCondicaoEspecial: "",
     loginEmail: "",
     loginSenha: "",
   });
-
+ 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+ 
   const handleButtonClick = () => {
     setFormData({
       nome: "",
-      sobrenome: "",
       email: "",
       senha: "",
       telefone: "",
-      cargo: "",
+      possuiCondicaoEspecial: "",
       loginEmail: "",
       loginSenha: "",
     });
     setIsButtonVisible(false);
   };
-
+ 
   return (
     <PageContainer>
       <FormContainer>
@@ -60,17 +58,6 @@ const Login = () => {
             />
           </InputGroup>
           <InputGroup>
-            <Label htmlFor="sobrenome">SOBRENOME</Label>
-            <Input
-              id="sobrenome"
-              name="sobrenome"
-              type="text"
-              placeholder="Sobrenome"
-              value={formData.sobrenome}
-              onChange={handleInputChange}
-            />
-          </InputGroup>
-          <InputGroup>
             <Label htmlFor="email">E-MAIL</Label>
             <Input
               id="email"
@@ -78,17 +65,6 @@ const Login = () => {
               type="email"
               placeholder="E-mail"
               value={formData.email}
-              onChange={handleInputChange}
-            />
-          </InputGroup>
-          <InputGroup>
-            <Label htmlFor="cargo">CARGO</Label>
-            <Input
-              id="cargo"
-              name="cargo"
-              type="text"
-              placeholder="Cargo"
-              value={formData.cargo}
               onChange={handleInputChange}
             />
           </InputGroup>
@@ -103,8 +79,24 @@ const Login = () => {
               onChange={handleInputChange}
             />
           </InputGroup>
+          <InputGroup>
+            <Label htmlFor="possuiCondicaoEspecial">POSSUI CONDIÇÃO ESPECIAL? S para (sim) e N para (não)</Label>
+            <Input
+              id="possuiCondicaoEspecial"
+              name="possuiCondicaoEspecial"
+              type="text"
+              placeholder="Condição especial"
+              value={formData.possuiCondicaoEspecial}
+              onChange={handleInputChange}
+            />
+          </InputGroup>
+          <InputGroup>
+            {isButtonVisible && (
+              <Button onClick={handleButtonClick}>Enviar</Button>
+            )}
+          </InputGroup>
         </Form>
-
+ 
         <Form>
           <Title>PARA LOGAR</Title>
           <InputGroup>
@@ -137,5 +129,6 @@ const Login = () => {
     </PageContainer>
   );
 };
-
+ 
 export default Login;
+ 
