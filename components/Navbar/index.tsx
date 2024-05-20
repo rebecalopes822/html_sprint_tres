@@ -21,6 +21,7 @@ const navLinks: NavLinkProps[] = [
   { name: "Acessibilidade", href: "/acessibilidade" },
   { name: "Login / Cadastro ", href: "/login" },
   { name: "Contato ", href: "/contato" },
+  { name: "Avaliação ", href: "/avaliacao" },
 ];
 
 const Menu = () => {

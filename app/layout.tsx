@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <Navbar />
-          {children}
-          <Footer />
+          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <Navbar />
+            <main style={{ flex: 1 }}>{children}</main>
+            <Footer />
+          </div>
         </StyledComponentsRegistry>
       </body>
     </html>
