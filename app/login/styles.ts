@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #fff;
 `;
 
@@ -14,23 +10,13 @@ export const FormContainer = styled.div`
   gap: 2rem;
   width: 90%;
   max-width: 800px;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-  margin: 3rem 0;
+  margin: 3rem auto; /* Centraliza o formulário horizontalmente */
 `;
 
 export const Form = styled.form`
   background-color: #f0f0f0;
   padding: 2rem;
   border-radius: 8px;
-  width: 100%;
-
-  @media (min-width: 768px) {
-    width: 48%;
-  }
 `;
 
 export const InputGroup = styled.div`

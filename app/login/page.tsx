@@ -19,8 +19,6 @@ const Login = () => {
     senha: "",
     telefone: "",
     possuiCondicaoEspecial: "",
-    loginEmail: "",
-    loginSenha: "",
   });
  
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -35,8 +33,6 @@ const Login = () => {
       senha: "",
       telefone: "",
       possuiCondicaoEspecial: "",
-      loginEmail: "",
-      loginSenha: "",
     });
     setIsButtonVisible(false);
   };
@@ -97,34 +93,6 @@ const Login = () => {
           </InputGroup>
         </Form>
  
-        <Form>
-          <Title>PARA LOGAR</Title>
-          <InputGroup>
-            <Label htmlFor="loginEmail">EMAIL</Label>
-            <Input
-              id="loginEmail"
-              name="loginEmail"
-              type="email"
-              placeholder="Email"
-              value={formData.loginEmail}
-              onChange={handleInputChange}
-            />
-          </InputGroup>
-          <InputGroup>
-            <Label htmlFor="loginSenha">SENHA</Label>
-            <Input
-              id="loginSenha"
-              name="loginSenha"
-              type="password"
-              placeholder="Senha"
-              value={formData.loginSenha}
-              onChange={handleInputChange}
-            />
-          </InputGroup>
-          {isButtonVisible && (
-            <Button onClick={handleButtonClick}>Enviar</Button>
-          )}
-        </Form>
       </FormContainer>
     </PageContainer>
   );

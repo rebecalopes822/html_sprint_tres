@@ -19,7 +19,7 @@ interface NavLinkProps {
 const navLinks: NavLinkProps[] = [
   { name: "Home", href: "/" },
   { name: "Acessibilidade", href: "/acessibilidade" },
-  { name: "Login / Cadastro ", href: "/login" },
+  { name: "Cadastro ", href: "/login" },
   { name: "Contato ", href: "/contato" },
   { name: "Avaliação ", href: "/avaliacao" },
 ];
