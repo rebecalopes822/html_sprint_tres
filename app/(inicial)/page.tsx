@@ -63,18 +63,19 @@ const Inicial = () => {
           </Bloco>
           <Bloco>
             <Flex>
-              <Title>CADASTRE-SE PARA UMA EXPERIÊNCIA PERSONALIZADA</Title>
+              <Title>CADASTRE-SE PARA CONHECERMOS MELHOR O NOSSO PÚBLICO</Title>
 
               <div>
                 <Info size={22} weight="fill" />
               </div>
             </Flex>
             <Descricao>
-              Nós acreditamos na importância de oferecer uma experiência
-              verdadeiramente personalizada e acessível. Para garantir que
-              possamos atender suas necessidades específicas e proporcionar a
-              melhor experiência possível, solicitamos que você realize um
-              rápido cadastro informando sobre sua deficiência visual
+              Nós acreditamos na importância de conhecer
+               nossos usuários.Para garantir melhorias e 
+               atender as suas necessidades e expectativas, 
+               proporcionando uma melhor experiência possível, 
+               solicitamos que você realize um rápido cadastro 
+               informando sobre sua condição especial, caso tenha.
             </Descricao>
           </Bloco>
           <Bloco>

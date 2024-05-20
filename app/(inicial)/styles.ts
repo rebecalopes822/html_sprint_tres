@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -26,6 +26,7 @@ export const DivSection = styled.section`
   padding: 0 2rem;
 `;
 
+
 export const DivMain = styled.div`
   width: 100%;
   max-width: 500px;
@@ -35,6 +36,11 @@ export const DivMain = styled.div`
   @media (min-width: 768px) {
     width: 50%;
     margin-bottom: 0;
+  }
+  
+
+  @media (max-width: 767px) {
+    margin-top: 2rem; 
   }
 `;
 
@@ -47,13 +53,20 @@ export const ContentArea = styled.div`
 `;
 
 export const ImageArea = styled.div`
-  width: 100%;
+  flex:1;
+  max-width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 
   @media (min-width: 768px) {
     width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    img {
+      max-height: 300px; 
+      object-fit: cover; 
+    }
   }
 `;
 
