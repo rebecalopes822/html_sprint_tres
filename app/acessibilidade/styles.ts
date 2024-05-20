@@ -59,7 +59,8 @@ export const Paragraph = styled.p`
 
 export const Button = styled.button`
   background-color: ${colors.blue};
-  color: ${colors.black}; // Alterado para preto
+
+  color: ${colors.black};
   border: none;
   padding: 10px 20px;
   cursor: pointer;
