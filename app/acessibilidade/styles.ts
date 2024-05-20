@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const colors = {
+  gray: "#F0F0F0", 
   blue: "#00A3FF",
-  fundo: "#CDCDCD",
   black: "#000000",
   white: "#FFFFFF",
 };
@@ -10,7 +10,7 @@ const colors = {
 export const Section = styled.section`
   color: ${colors.black};
   font-family: "Arial";
-  background-color: ${colors.fundo};
+  background-color: ${colors.gray}; 
   overflow: hidden;
 `;
 
@@ -59,16 +59,16 @@ export const Paragraph = styled.p`
 
 export const Button = styled.button`
   background-color: ${colors.blue};
-  color: ${colors.black};
+  color: ${colors.white}; // Alterado para branco
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
   width: 200px;
   &:hover {
-    background-color: white;
-    color: #00a3ff;
-    border: 0.2px solid #00a3ff;
+    background-color: ${colors.white}; 
+    color: ${colors.blue}; 
+    border: 0.2px solid ${colors.blue}; 
     opacity: 0.8;
   }
 
@@ -96,4 +96,8 @@ export const LayoutContainer = styled.div`
   max-width: 1150px;
   width: 100%;
   margin: 0 auto;
+`;
+
+export const AcessibilidadeText = styled.span`
+  color: ${colors.black};
 `;

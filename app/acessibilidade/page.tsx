@@ -10,6 +10,7 @@ import {
   Image,
   FlexDivButtons,
   LayoutContainer,
+  AcessibilidadeText,
 } from "./styles";
 import { useState } from "react";
 
@@ -21,11 +22,11 @@ const Acessibilidade = () => {
   const startReading = () => {
     if (isReading) return;
     setIsReading(true);
-    const textToRead = `BEM-VINDO À NOSSA ABA DEDICADA À ACESSIBILIDADE, ONDE A INOVAÇÃO SE ENCONTRA COM A INCLUSÃO AQUI APRESENTAMOS NOSSO REVOLUCIONÁRIO
-              LEITOR DE TELA, PROJETADO PARA TORNAR A EXPERIÊNCIA DIGITAL
-              ACESSÍVEL E EFICIENTE PARA TODOS. DESCUBRA COMO VOCÊ PODE EXPLORAR
-              O CONTEÚDO DE MANEIRA ÚNICA E INTUITIVA...`;
 
+    const textToRead = `BEM-VINDO À NOSSA ABA DEDICADA À ACESSIBILIDADE, ONDE A INOVAÇÃO SE ENCONTRA COM A INCLUSÃO SE ENCONTRA COM A INCLUSÃO. AQUI APRESENTAMOS NOSSO REVOLUCIONÁRIO
+    LEITOR DE TELA, PROJETADO PARA TORNAR A EXPERIÊNCIA DIGITAL
+    ACESSÍVEL E EFICIENTE PARA TODOS. DESCUBRA COMO VOCÊ PODE EXPLORAR
+    O CONTEÚDO DE MANEIRA ÚNICA E INTUITIVA...`;
     const utterance = new SpeechSynthesisUtterance(textToRead);
     speechSynthesis.speak(utterance);
 
@@ -59,7 +60,6 @@ const Acessibilidade = () => {
             <Paragraph>
               Descrição Instantânea: Pressione “ATIVAR” para ouvir descrições
               detalhadas dos textos. 
-
             </Paragraph>
             <FlexDivButtons>
               <Button onClick={startReading}>ATIVAR</Button>
