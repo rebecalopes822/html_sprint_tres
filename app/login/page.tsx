@@ -1,4 +1,6 @@
+
 "use client"
+
 import { ChangeEvent, useState } from "react";
 import {
   Button,
@@ -74,7 +76,6 @@ const Login = () => {
     }
   };
   
-
   return (
     <PageContainer>
       <FormContainer>
@@ -88,7 +89,9 @@ const Login = () => {
               type="text"
               placeholder="Nome"
               value={formData.nome}
+
               onChange={handleNomeChange}
+
             />
           </InputGroup>
           <InputGroup>
@@ -100,6 +103,7 @@ const Login = () => {
               placeholder="E-mail"
               value={formData.email}
               onChange={handleEmailChange}
+
             />
           </InputGroup>
           <InputGroup>
@@ -110,18 +114,22 @@ const Login = () => {
               type="text"
               placeholder="Telefone"
               value={formData.telefone}
+
               onChange={handleTelefoneChange}
             />
           </InputGroup>
           <InputGroup>
             <Label htmlFor="possuiCondicaoEspecial">POSSUI CONDIÇÃO ESPECIAL? Digite "1" para (NÃO) e "2" para (SIM)</Label>
+
             <Input
               id="possuiCondicaoEspecial"
               name="possuiCondicaoEspecial"
               type="text"
               placeholder="Condição especial"
               value={formData.possuiCondicaoEspecial}
+
               onChange={handleCondicaoEspecialChange}
+
             />
           </InputGroup>
           <InputGroup>
@@ -130,10 +138,10 @@ const Login = () => {
             )}
           </InputGroup>
         </Form>
-
       </FormContainer>
     </PageContainer>
   );
 };
+
 
 export default Login;
